@@ -4,6 +4,15 @@
 /* -------------- GENERAL/BODY STYLES ---------------- */
 /* --------------------------------------------------- */
 
+body {
+    text-align: center;
+    width:75%;
+    margin:0px auto;
+    padding:5%;
+    font-family: sans-serif;
+    line-height:1.2;
+}
+
 ul {
     padding:0;
 }
@@ -50,14 +59,6 @@ ol li::before {
 /* ------------------ TEXT STYLES -------------------- */
 /* --------------------------------------------------- */
 
-body {
-    text-align: center;
-    width:75%;
-    margin:0px auto;
-    padding:5%;
-    font-family: sans-serif;
-    line-height:1.2;
-}
 
 #clockdiv {
     position:absolute;
@@ -107,4 +108,38 @@ ul button {
     margin-top:0.5em;
     margin-left:0;
     min-width:30%;
+}
+
+
+
+/* --------------------------------------------------- */
+/* ----------------- MEDIA QUERIES ------------------- */
+/* --------------------------------------------------- */
+
+@media only screen and (max-width: 900px) {
+    body {
+        width:95%;
+        margin:0px auto;
+        padding:25% 5% 15% 5%;
+    }
+
+    #clockdiv {
+        position: absolute;
+        top:2%;
+        width:100%;
+        left:auto;
+        right:auto;
+        text-align:center;
+    }
+
+    #viewHighscores {
+        position: relative;
+        display:block;
+        margin:0px auto;
+    }
+
+    #submitInitials {
+        display:block;
+        margin-top:2em;
+    }
 }
