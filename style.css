@@ -1,0 +1,104 @@
+
+
+/* --------------------------------------------------- */
+/* -------------- GENERAL/BODY STYLES ---------------- */
+/* --------------------------------------------------- */
+
+ul {
+    padding:0;
+}
+
+ol {
+    width:50%;
+    margin:2em auto 2em auto;
+    padding:0;
+}
+
+ol li {
+    padding:1%;
+    text-align: left;
+    border-bottom:1px solid black;
+}
+
+ol li::before {
+    padding-right:0;
+}
+
+#questionList {
+    width:65%;
+    margin:0px auto;
+}
+
+.question {
+    display:none;
+}
+
+
+#answerMsgDiv {
+    width: 65%;
+    margin:0px auto;
+}
+
+
+/* --------------------------------------------------- */
+/* ------------------ TEXT STYLES -------------------- */
+/* --------------------------------------------------- */
+
+body {
+    text-align: center;
+    width:75%;
+    margin:0px auto;
+    padding:5%;
+    font-family: sans-serif;
+    line-height:1.2;
+}
+
+#clockdiv {
+    position:absolute;
+    right:2%;
+    top:2%;
+}
+
+#answerMsg {
+    text-align:left;
+}
+
+#answerMsg,
+#answerMsgDiv hr {
+    color:gray;
+}
+
+
+/* --------------------------------------------------- */
+/* ----------------- BUTTON STYLES ------------------- */
+/* --------------------------------------------------- */
+
+button {
+    background-color: purple;
+    color:white;
+    margin:0px auto;
+    border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+#viewHighscores {
+    position:absolute;
+    top:2%;
+    left:2%;
+    border:none;
+    background-color:transparent;
+    color:purple;
+    padding:0;
+    font-size:1em;
+}
+
+ul button {
+    display:block;
+    margin-top:0.5em;
+    margin-left:0;
+    min-width:30%;
+}

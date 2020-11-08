@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Javascript Quiz</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="wrapper">
+      <header>
+        <button id="viewHighscores">View Highscores</button>
+        <h1>Javascript Quiz</h1>
+        <h2 id="gameOutcome"></h2>
+        <div id="clockdiv"></div>
+        <p id="points"></p>
+      </header>
+
+      <button id="startBtn">Start the Game Here!</button>
+
+      <div id="questionList">
+
+         <section id="q1" class="question">
+           <h2>Javascript included in an HTML file would be within which of the following tags?</h2>
+              <ul>
+                <button>
+                  div
+                </button>
+
+                <button>
+                  section
+                </button>
+
+                <button value="correct">
+                  script
+                </button>
+
+                <button>
+                  style
+                </button>
+              </ul>
+         </section>
+
+         <section id="q2" class="question">
+          <h2>Which of the following is the correct syntax to link an external js file?</h2>
+             <ul>
+               <button>
+                &#60;script href="example.js"&#62;&#60;/script&#62;
+               </button>
+
+               <button value="correct">
+                &#60;script src="example.js"&#62;&#60;/script&#62;
+               </button>
+
+               <button>
+                &#60;script alt="example.js"&#62;&#60;/script&#62;
+               </button>
+
+               <button>
+                &#60;script value="example.js"&#62;&#60;/script&#62;
+               </button>
+             </ul>
+        </section>
+
+        <section id="q3" class="question">
+          <h2>How do you declare a function in Javascript?</h2>
+             <ul>
+               <button value="correct">
+                 function myFunctionName()
+               </button>
+
+               <button>
+                function = myFunctionName()
+               </button>
+
+               <button>
+                function.myFunctionName()
+               </button>
+
+               <button>
+                myFunctionName(functions)
+               </button>
+             </ul>
+        </section>
+
+
+        <section id="q4" class="question">
+          <h2>Which of the following functions has a parameter of x?</h2>
+             <ul>
+               <button value="correct">
+                myFunctionName(x) {
+                  x+y=z;
+                }
+               </button>
+
+               <button>
+                myFunctionName(y) {
+                  y+z=x;
+                }
+               </button>
+
+               <button>
+                myFunctionName() {
+                  x+y=z;
+                }
+               </button>
+
+               <button>
+                myFunctionName(z) {
+                  z/x=y;
+                }
+               </button>
+             </ul>
+        </section>
+
+
+        <section id="q5" class="question">
+          <h2>How do you write the operator for (not equal to) in Javascript?</h2>
+             <ul>
+               <button>
+                 x not!= y
+               </button>
+
+               <button>
+                 x not= y
+               </button>
+
+               <button value="correct">
+                 x != y
+               </button>
+
+               <button>
+                x /= y
+              </button>
+             </ul>
+        </section>
+
+
+        <section id="q6" class="question">
+          <h2>How do you call a function in Javascript?</h2>
+             <ul>
+               <button>
+                 call(myFunctionName());
+               </button>
+
+               <button value="correct">
+                myFunctionName();
+               </button>
+
+               <button>
+                call.myFunctionName();
+               </button>
+
+               <button>
+                myFunctionName(call);
+              </button>
+             </ul>
+        </section>
+
+
+        <section id="q7" class="question">
+          <h2>What is the proper syntax for <strong>multi-line</strong> comments in Javascript?</h2>
+             <ul>
+               <button>
+                 // Your comment here //
+               </button>
+
+               <button>
+                &#60;!-- Your comment Here --&#62;
+               </button>
+
+               <button value="correct">
+                 /* Your comment here */
+               </button>
+
+               <button>
+                &#60;! Your comment here !&#62;
+               </button>
+             </ul>
+        </section>
+
+
+        <section id="q8" class="question">
+          <h2>What is the correct function to round a number <strong>down</strong> to the nearest integer?</h2>
+             <ul>
+               <button>
+                 Math.round(5.6);
+               </button>
+
+               <button>
+                parseInt(5.6);
+               </button>
+
+               <button value="correct">
+                Math.floor(5.6);
+               </button>
+
+               <button>
+                mathInt(5.6);
+               </button>
+             </ul>
+        </section>
+
+        <section id="q9" class="question">
+          <h2>How do you declare a variable in Javascript?</h2>
+             <ul>
+               <button>
+                 variable = myVariable;
+               </button>
+
+               <button value="correct">
+                 var myVariable;
+               </button>
+
+               <button>
+                 var = myVariable;
+               </button>
+
+               <button>
+                var(MyVariable);
+              </button>
+             </ul>
+        </section>
+
+        <section id="q10" class="question">
+          <h2>Which of the following operators will <strong>assign</strong> a new value to a variable</h2>
+             <ul>
+               <button>
+                 ==
+               </button>
+
+               <button value="correct">
+                 =
+               </button>
+
+               <button>
+                 ===
+               </button>
+
+               <button>
+                !=
+              </button>
+             </ul>
+        </section>
+
+       
+      </div>
+
+      <div id="answerMsgDiv">
+        <hr>
+        <p id="answerMsg"></p>
+      </div>
+
+      <section id="addToLeaderboard">
+        <label for="initials">Enter initials:</label>
+        <input type="text" id="initials" placeholder="Enter your initials here!">
+        <button id="submitInitials">Submit</button>
+      </section>
+
+      <section id="highScoreScreen">
+        <ol id="highscoreList"></ol>
+        <button id="goBack">Go Back</button>
+        <button id="clearHighscores">Clear Highscores</button>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
