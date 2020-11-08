@@ -133,7 +133,6 @@ function validateAnswer(e) {
 
         // if clicking on a button given the value of correct, add points, send "correct" messaging, move to next question
         if (e.target.getAttribute('value') === "correct") {
-            console.log('this answer is correct!');
             nextQuestion();
             points += 10;
             pointCount.innerHTML = "Points: " + points;
@@ -143,7 +142,6 @@ function validateAnswer(e) {
 
         // if clicking on a button without the value of correct, send "incorrect" messaging and deduct time
         else if (e.target.nodeName === "BUTTON") {
-            console.log("you're an idiot");
             answerMsg.innerHTML = "Wrong answer, try again!";
             answerMsg.style.display = "block";
             // if the time decrement would take the time to zero or below, end the game
