@@ -39,6 +39,12 @@ ol li::before {
     margin:0px auto;
 }
 
+#points {
+    width:50%;
+    margin:0px auto;
+    margin-bottom:1em;
+}
+
 
 /* --------------------------------------------------- */
 /* ------------------ TEXT STYLES -------------------- */

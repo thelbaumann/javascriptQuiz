@@ -43,6 +43,8 @@ var time;
 
 var highscores = [];
 
+var localHighscores;
+
 
 // event listeners
 
@@ -214,6 +216,8 @@ function addHighscore() {
     // add this new object to the highscores array
     highscores.push(highscoreEntry);
 
+    localStorage.setItem("highscores", JSON.stringify(highscores));
+
     // call the screen to view the leaderboard
     viewHighscores();
 }
@@ -231,13 +235,16 @@ function viewHighscores() {
     // makes sure the score list doesn't repeat itself, if the user accesses the highscore screen multiple times
     highscoreList.innerHTML = "";
 
+    // adds the highscores to local storage
+    localHighscores = JSON.parse(localStorage.getItem("highscores") || "[]");
+
     // only run the for loop if there is anything in the highscores array
-    if (highscores.length > 0) {
+    if (localHighscores.length > 0) {
 
         // loop through all objects in the highscore array to add their properties to a list element which is then appended to the list
-        for (i = 0; i<highscores.length; i++) {
+        for (i = 0; i<localHighscores.length; i++) {
             var listElement = document.createElement("LI");
-            var liText = document.createTextNode(highscores[i].initials + " - " + highscores[i].score);
+            var liText = document.createTextNode(localHighscores[i].initials + " - " + localHighscores[i].score);
             listElement.appendChild(liText);
             highscoreList.appendChild(listElement);    
         }
@@ -259,9 +266,10 @@ function viewHighscores() {
 
 function clearHighscores() {
 
-    // clears the highscores visually and also from the array 
+    // clears the highscores visually, from the code array, and from the localStorage
     highscores = [];
     highscoreList.innerHTML = "You've cleared the highscore board!";
+    localStorage.removeItem("highscores");
 }
 
 
