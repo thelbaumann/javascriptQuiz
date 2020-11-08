@@ -38,13 +38,13 @@ THEN I can save my initials and score
 ## Walkthrough
 
 ### Landing Page - Beginning the Quiz
-![screenshot of landing page](https://github.com/thelbaumann/passwordGenerator/blob/main/images/screen_1.png)
+![screenshot of landing page](https://github.com/thelbaumann/javascriptQuiz/blob/main/images/firstScreen.png)
 
 This site begins with quiz header, a quiz description, two buttons, and a timer. On page load, this page is run a function that "intializes": meaning that it will hide any content that doesn't belong (that could be leftover depending on what link path within the site you chose to reach the main page). It sets the timer paragraph to display the total amount of time that you will have during your quiz: five minutes. This timer does not run until you begin the quiz by clicking the start button. One button in the top left corner will take you to the high-score page, which is clickable at any point during the experience if you wish to exit the quiz mid-question or view the high-scores before taking the quiz. This button works via an onclick event that shifts to hide the main page content and display the leaderboard. There are a series of other conditionals set in motion by this click event that I will discuss further on the description of that page. The second button on the main page is to begin the quiz. By clicking this button, you are setting in motion many events. First, it resets all of the important values (which question to display to the user, amount of points, and amount of time left on the timer) to their default values. This is so if you take the quiz multiple times without refreshing, no values will carryover from the last attempt (besides scores on the leaderboard which are locally stored!)! Secondly, it sets an interval on the timer function so that it updates every second, so that the user can see in real time how much time is remaining in their attempt. Thirdly, the start button is hidden and the first question is displayed.
 
 
 #### Taking the Quiz
-![screenshot of popup window form](https://github.com/thelbaumann/passwordGenerator/blob/main/images/screen_2.png) 
+![screenshot of the quiz in-session](https://github.com/thelbaumann/javascriptQuiz/blob/main/images/secondScreen.png) 
 
 Once the quiz begins, there are many moving parts (many conditional statements and loops). The timer is running, so you have 5 minutes to answer 10 multiple-choice questions. You can only move on to the next question if you answer the current question correctly. The quiz will alert you if you have answered correctly or incorrectly. If you answer incorrectly, ten seconds are deducted from your remaining time. If you answer correctly, 10 points are added to your point total. These questions run a large if/else statement: 
 
@@ -58,13 +58,13 @@ No matter the scenario in which the quiz ends, you move onto the next screen to 
 
 
 #### Entering your Leaderboard Entry
-![screenshot of form validation error](https://github.com/thelbaumann/passwordGenerator/blob/main/images/screen_3.png) 
+![screenshot of entering a new score to the leaderboard](https://github.com/thelbaumann/javascriptQuiz/blob/main/images/thirdScreen.png) 
 
 After completing the quiz one way or the other, the quiz will allow you to enter your initials to be added to the leaderboard. However, depending on if you finished within the allotted amount of time or not, a WinGame or LoseGame function is called. These only differ in the messaging: telling you whether or not you completed the quiz on time. They both display your score and an input field to enter your initials to the leaderboard. Upon submission of your initials, an AddHighScore function is run, which stores your initials and score as properties on an object named "highscoreEntry". This object is then added to an array in the javascript, and this array of objects is then set to an item in the local storage of the browser. I used JSON.stringify to store the array in local storage. The submission of these initials runs a ViewHighscores function which then hides the leaderboard entry page and displays the leaderboard page.
 
 
 ### Viewing the Leaderboard
-![screenshot of landing page changes](https://github.com/thelbaumann/passwordGenerator/blob/main/images/screen_4.png) 
+![screenshot of the leaderboard page](https://github.com/thelbaumann/javascriptQuiz/blob/main/images/fourthScreen.png) 
 
 The final functions of this quiz run when you enter the leaderboard page. First, any content not relevant to the leaderboard page is hidden. This is to cover any use-cases where the "view high-scores" button could be pushed from the main page, in the middle of the quiz, or while already on the leaderboard page. These statements ensure there is no irrelevant content showing on this page regardless of how or when the user navigated to it. Then, the visual list (an html ordered list) is emptied, to make sure there aren't re-entries of old scores every time the scores are appended to the list. Then, a variable is set to the value of our local storage item, and uses JSON.parse to set it back into a array of objects we can create a list with. An if statement begins: 
 
