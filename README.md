@@ -88,11 +88,11 @@ git clone git@github.com:thelbaumann/javascriptQuiz.git
 ## Credits
 I consulted various sources to help me in this project.
 
-First, I utilized a [StackOverflow thread](https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript) to help me with the equation for picking a random integer that is within a certain range of numbers. 
+First, I watched a [YouTube tutorial by user Florin Pop](https://www.youtube.com/watch?v=x7WJEmxNlEs) to help me with creating a simple timer that did not require me to pull the current date/time, or create a date/time to count down to, in order to function.
 
-Secondly, I used [this page from W3Schools](https://www.w3schools.com/howto/howto_js_copy_clipboard.asp) to help me write the function for the "click to copy to keyboard" functionality for the generated password.
+Secondly, I used this [Stack Overflow thread](https://stackoverflow.com/questions/43762363/how-to-store-an-array-of-objects-in-local-storage) to help me with storing and pulling objects with properties to/from localStorage in a format that would be useful for my purposes.
 
-Thirdly, I used this [Mozilla Developer Page](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number) to help me figure out how to figure out setting min, max, and default values for my number input.
+Thirdly, I used this [W3Schools article](https://www.w3schools.com/jsref/met_node_appendchild.asp) to help me with creating text from the information I had pulled from localStorage, creating ordered list html elements, and appending that data to them.
 
 ## Authors
 Laura Baumann (https://www.linkedin.com/in/laura-baumann-070338102/)
